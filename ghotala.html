@@ -19,6 +19,8 @@
 .records{background:#eef7ff;padding:10px;border-radius:8px;margin-top:10px}
 .number{font-weight:800;color:#b71c1c}
 </style>
+  <script data-goatcounter="https://chaureroshan.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <body>
@@ -782,6 +784,24 @@ PESA ग्रामसभा, ग्रामपंचायत, अधिक�
 
 <footer>
 <p>© Maharashtra PESA Citizen Portal | नागरिकांसाठी माहिती व दस्तऐवज-आधारित पडताळणी</p>
+<div id="visitor-count-footer"
+     style="margin-top:14px; text-align:center; font-size:14px; font-weight:600;">
+  👁️ Visitor Count: <span id="total-visits">...</span>
+</div>
+
+<script>
+fetch('https://chaureroshan.goatcounter.com/counter/TOTAL.json')
+  .then(function(response) {
+    if (!response.ok) throw new Error('Counter unavailable');
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById('total-visits').textContent = data.count;
+  })
+  .catch(function() {
+    document.getElementById('total-visits').textContent = '—';
+  });
+</script>
 </footer>
 
 </body>
