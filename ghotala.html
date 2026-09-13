@@ -5,406 +5,785 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>घोटाळा | Maharashtra PESA Citizen Portal</title>
 <link rel="stylesheet" href="styles.css">
+
 <style>
-.badge{display:inline-block;padding:6px 12px;border-radius:20px;background:#fee2e2;color:#991b1b;font-weight:700}
-.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px}
-.check{padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:9px}
-.audit-flow{text-align:center;background:#f8fafc;border:1px solid #dbe4e0;padding:18px;border-radius:12px;font-weight:700;line-height:2}
-.audit-flow span{display:block;color:#166534}
-.small{font-size:14px;color:#64748b}
+.badge{display:inline-block;padding:6px 12px;border-radius:20px;background:#e8f5e9;color:#176b2c;font-weight:700;margin:4px 4px 4px 0}
+.checklist{padding-left:0;list-style:none}
+.check{background:#fff;border-left:5px solid #2e7d32;margin:10px 0;padding:12px 15px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.audit-flow{font-weight:700;text-align:center;font-size:1.05rem;line-height:2;background:#f1f8e9;padding:18px;border-radius:12px}
+.small{font-size:.92rem;color:#555}
+.scam-card{margin:18px 0;padding:20px;border-radius:12px;background:#fff;border:1px solid #dfe8df;box-shadow:0 3px 12px rgba(0,0,0,.07)}
+.scam-card h3{margin-top:0;color:#176b2c}
+.scam-card h4{margin-bottom:5px;color:#333}
+.redflag{background:#fff3e0;padding:10px;border-radius:8px;margin-top:10px}
+.records{background:#eef7ff;padding:10px;border-radius:8px;margin-top:10px}
+.number{font-weight:800;color:#b71c1c}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>🌿 Maharashtra PESA</h1>
-<p>तुमचं गाव • तुमचे अधिकार • तुमचा PESA</p>
+<h1>महाराष्ट्र PESA नागरिक पोर्टल</h1>
+<p>PESA ग्रामसभा • अधिकार • अभिलेख • कायदेशीर लेखापरीक्षण</p>
 </header>
 
-<!-- =========================
-     MAIN NAVIGATION
-========================= -->
 <nav>
-<a href="index.html">मुख्यपृष्ठ</a>
+<a href="index.html">Home</a>
 <a href="pesa.html">PESA</a>
-<a href="gram-sabha.html">ग्रामसभा</a>
-<a href="powers.html">अधिकार</a>
-<a href="audit.html">कायदेशीर लेखापरीक्षण</a>
+<a href="gram-sabha.html">Gram Sabha</a>
+<a href="powers.html">Powers</a>
+<a href="audit.html">Legal Audit</a>
 <a href="ghotala.html" class="active">घोटाळा</a>
-<a href="records.html">अभिलेख</a>
+<a href="records.html">Records</a>
 <a href="rti.html">RTI</a>
-<a href="documents.html">कागदपत्रे</a>
-<a href="judgments.html">न्यायनिर्णय</a>
+<a href="documents.html">Documents</a>
+<a href="judgments.html">Judgments</a>
 <a href="contact.html">संपर्क</a>
 </nav>
 
 <main>
 
 <section class="hero">
-<h2>🚨 PESA ग्रामपंचायत — पूर्ण Scam / Fraud Detection Framework</h2>
-<p>PESA ग्रामसभा, पंचायत प्रशासन, निधी, विकासकामे, खरेदी, मजुरी, नैसर्गिक संसाधने आणि विशेष PESA अधिकारांची कागदपत्रांवर आधारित तपासणी.</p>
-<span class="badge">पुराव्यावर आधारित तपासणी करा • आधी निष्कर्ष काढू नका</span>
-</section>
-
-<section class="info-card">
-<h2>📌 आधी एक मूलभूत गोष्ट</h2>
-<p>PESA क्षेत्रातील ग्रामपंचायत सामान्य ग्रामपंचायतीपेक्षा विशेष कायदेशीर चौकटीत काम करते. Scheduled Areas साठी ग्रामसभा आणि पंचायत संदर्भातील विशेष तरतुदी लागू होतात.</p>
-<div class="comparison-box">
-<div><strong>प्रश्न 1</strong><br>सामान्य ग्रामपंचायत नियमांचे पालन झाले का?</div>
-<div><strong>प्रश्न 2</strong><br>PESA ग्रामसभा आणि विशेष PESA नियमांचे पालन झाले का?</div>
-</div>
-<p class="small">अंतिम निष्कर्षासाठी अद्ययावत कायदा, Rules, शासन निर्णय आणि अधिकृत अभिलेख तपासा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग A — ग्रामसभा बनावट / कागदोपत्री दाखवण्याचे प्रकार</h2>
-
-<h3>1. 🚨 खोटी ग्रामसभा दाखवणे</h3>
-<p>ग्रामसभा प्रत्यक्ष झाली का हे Notice → Attendance → Proceedings → Quorum → Resolution या chain ने तपासा.</p>
-<div class="checklist">
-<div class="check">Notice</div>
-<div class="check">Notice Date</div>
-<div class="check">Dispatch / Outward</div>
-<div class="check">Attendance</div>
-<div class="check">Proceedings</div>
-<div class="check">Quorum Calculation</div>
-<div class="check">Agenda</div>
-<div class="check">फोटो / व्हिडिओ उपलब्ध असल्यास</div>
-<div class="check">संबंधित ठराव</div>
-</div>
-
-<h3>2. 15 दिवसांची खोटी / मागील तारीख असलेली Notice</h3>
-<p>ग्रामसभा तारीख, Notice Date, Outward/Dispatch, Postal Receipt, Officer Acknowledgment आणि Proceedings यांचा cross-check करा.</p>
-
-<h3>3. बनावट Attendance</h3>
-<ul>
-<li>दुसऱ्याच्या नावावर सही</li>
-<li>एकाच handwriting मध्ये अनेक signatures</li>
-<li>मृत व्यक्तीची सही</li>
-<li>गावाबाहेरील व्यक्तीची उपस्थिती</li>
-<li>नंतर भरलेली उपस्थिती</li>
-<li>Quorum पूर्ण करण्यासाठी बनावट नावे</li>
-</ul>
-<p><strong>Cross-check:</strong> Voter List ↔ Attendance ↔ Proceedings</p>
-
-<h3>4. Quorum मध्ये फेरफार</h3>
-<p>लागू PESA नियमातील exact quorum formula वापरा. उदाहरणार्थ एखाद्या नियमात मतदारसंख्येच्या टक्केवारीसोबत कमाल संख्या असेल तर त्यानुसार गणपूर्ती मोजा.</p>
-
-<h3>5. Gram Sabha Resolution बदलणे</h3>
-<p>Original Proceedings ↔ Resolution Book ↔ Panchayat Resolution ↔ Department Copy ↔ Work Order तपासा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग B — PESA अधिकारांशी संबंधित गैरव्यवहार</h2>
-
-<h3>6. ग्रामसभेची मंजुरी न घेता विकासकाम</h3>
-<p>लागू PESA तरतुदीनुसार ग्रामसभेची पूर्वमंजुरी/भूमिका आवश्यक आहे का ते तपासा.</p>
-<div class="checklist">
-<div class="check">Project Proposal</div>
-<div class="check">Gram Sabha Notice</div>
-<div class="check">Agenda</div>
-<div class="check">Proceedings</div>
-<div class="check">Resolution</div>
-<div class="check">Administrative Sanction</div>
-<div class="check">Work Order</div>
-</div>
-
-<h3>7. ग्रामसभेच्या निर्णयाकडे दुर्लक्ष</h3>
-<p>Original Resolution ↔ Work Order ↔ Site ↔ Estimate ↔ Completion Report यांची तुलना करा.</p>
-
-<h3>8. लाभार्थी निवडीत गैरव्यवहार</h3>
-<p>शासकीय निकष → Gram Sabha Final List → Actual Sanctioned List. फरक असल्यास “हा बदल कोणत्या आदेशाने झाला?” याचा record मागा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग C — Development Works मधील घोटाळे</h2>
-
-<h3>9. काम कागदावर पूर्ण, प्रत्यक्ष अपूर्ण</h3>
-<p>Completion Certificate ↔ MB ↔ Final Bill ↔ Photos ↔ Site Inspection ↔ Asset Register.</p>
-
-<h3>10. Estimate फुगवणे</h3>
-<p>Detailed Estimate, Schedule of Rates, Technical Sanction, Administrative Sanction, MB आणि Final Expenditure तपासा.</p>
-
-<h3>11. Measurement Book मध्ये खोटी मोजमाप</h3>
-<p>लांबी, रुंदी, खोली आणि प्रमाण प्रत्यक्ष मोजणीशी जुळते का तपासा. संबंधित MB ची प्रमाणित प्रत मागा.</p>
-
-<h3>12. खोटी Completion Certificate</h3>
-<p>Completion Certificate ↔ MB ↔ Site Inspection ↔ Photos cross-check करा.</p>
-
-<h3>13. एकाच कामासाठी Double Payment</h3>
-<p>Work ID + Asset ID + Sanction + Work Order + MB + Payment + Scheme Name जुळवा.</p>
-
-<h3>14. कामाचे Splitting</h3>
-<p>समान तारीख, contractor/vendor, site, कामाचे स्वरूप आणि सलग bills तपासा. स्वतंत्र sanction आहे की एकाच कामाचे विभाजन ते शोधा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग D — खरेदीतील घोटाळे</h2>
-
-<h3>15. खोटी बिले</h3>
-<p>Invoice → Purchase Order → Quotation → Comparative Statement → Stock Register → Delivery Challan → Payment Record.</p>
-
-<h3>16. फुगवलेला दर</h3>
-<p>Quotation → Comparative Statement → Approved Rate → Invoice → Payment.</p>
-
-<h3>17. खोटा Supplier</h3>
-<p>Supplier अस्तित्वात आहे का, पत्ता, GST/PAN, invoice, bank account आणि delivery proof तपासा.</p>
-
-<h3>18. एकाच Supplier कडून सतत खरेदी</h3>
-<p>हे स्वतःमध्ये भ्रष्टाचाराचा पुरावा नाही; पण quotation process, दर, competition आणि procurement records तपासा.</p>
-
-<h3>19. Stock Register Fraud</h3>
-<p>Invoice → Stock → Issue → Installation → Asset Register ही chain जुळवा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग E — मजुरी / MGNREGA</h2>
-
-<h3>20. खोटी Muster Roll</h3>
-<p>काम न केलेला मजूर, मृत व्यक्ती, गावाबाहेरील व्यक्ती, एकाच दिवशी दोन कामे किंवा बनावट attendance यासाठी Muster Roll ↔ Attendance ↔ Wage List ↔ Payment ↔ Measurement ↔ Worksite तपासा.</p>
-
-<h3>21. मजुरी दुसऱ्याच्या खात्यात</h3>
-<p>Worker ID ↔ Wage List ↔ Payment Details ↔ Bank/Post Office Record.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग F — निधीचा गैरवापर</h2>
-
-<h3>22. PESA 5% अबंध निधी</h3>
-<p>मंजूर निधी → ग्रामपंचायतीला प्राप्त → ग्रामसभा निर्णय → खर्च → काम → Utilization Certificate.</p>
-<ul>
-<li>निधी दुसऱ्या कामासाठी</li>
-<li>मंजुरीशिवाय खर्च</li>
-<li>खोटी bills</li>
-<li>अपूर्ण काम</li>
-<li>Unused balance लपवणे</li>
-<li>UC मध्ये चुकीची माहिती</li>
-</ul>
-
-<h3>23. ग्रामसभा कोषाचा गैरवापर</h3>
-<p>Kosh Account, Receipt, Expenditure, Bank/Cash Record, Kosh Committee, Audit आणि Gram Sabha Presentation तपासा.</p>
-
-<h3>24. निधी आला पण काम नाही</h3>
-<p>Bank/PFMS → Voucher → MB → Site → Completion → UC.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग G — PESA Natural Resources</h2>
-
-<h3>25. 🌳 लघुवनोपज (MFP)</h3>
-<p>कोणते MFP, संकलन, वजन, दर, विक्री, विक्री रक्कम, ग्रामसभेला मिळालेली रक्कम, खर्च, Gram Sabha Kosh आणि Forest Department correspondence तपासा.</p>
-
-<h3>26. ⛏️ गौण खनिज</h3>
-<p>Permission → लागू असल्यास Gram Sabha consultation/sanction → Quantity → Royalty → Transport → Payment.</p>
-
-<h3>27. 🌿 आदिवासी जमीन</h3>
-<p>7/12, फेरफार, जमीन हस्तांतरण, ताबा, आदिवासी/गैरआदिवासी स्थिती, Gram Sabha Resolution आणि Collector Proceedings तपासा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग H — दारू / बाजार</h2>
-
-<h3>28. 🍺 दारू दुकान</h3>
-<p>परवानगी, Gram Sabha Proposal, Resolution, annual continuation, Excise correspondence आणि closure resolution असल्यास त्याची अंमलबजावणी तपासा.</p>
-
-<h3>29. 🏪 आठवडी बाजार</h3>
-<p>बाजार व्यवस्थापन, दुकान शुल्क, पावत्या, जमा रक्कम, खर्च, अनधिकृत वसुली आणि ग्रामसभा निर्णय तपासा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग I — ग्रामपंचायत मालमत्ता</h2>
-
-<h3>30. 🏠 Asset चोरी / गायब</h3>
-<p>वाहन, संगणक, printer, furniture, generator, solar equipment, water tank, इमारती, दुकाने आणि सार्वजनिक मालमत्ता: Asset Register ↔ प्रत्यक्ष मालमत्ता.</p>
-
-<h3>31. ग्रामपंचायत जमीन / दुकानातून गैरव्यवहार</h3>
-<p>Lease ↔ Rent Register ↔ Resolution ↔ Agreement ↔ Receipt ↔ Bank/Cash Entry.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग J — कर / वसुली</h2>
-
-<h3>32. घरपट्टी / पाणीपट्टी वसुली</h3>
-<p>Receipt Book → Demand Register → Collection Register → Cash Book → Bank Deposit.</p>
-
-<h3>33. अनधिकृत शुल्क</h3>
-<p>अधिकृत fee किती? Receipt आहे का? लागू नियम काय सांगतो? याची पडताळणी करा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग K — पंचायत कर्मचाऱ्यांशी संबंधित गैरप्रकार</h2>
-
-<h3>34. खोटी उपस्थिती</h3>
-<p>Attendance Register, Biometric Record असल्यास, Leave, Duty Order आणि Salary Record तपासा.</p>
-
-<h3>35. काम न करता वेतन</h3>
-<p>Attendance → Leave → Salary → Duty Record.</p>
-
-<h3>36. ग्रामसभा ठरावाची अंमलबजावणी न करणे</h3>
-<p>ग्रामसभा ठराव, पंचायत action, work report आणि लागू कायदेशीर प्रक्रिया तपासा. संबंधित अद्ययावत तरतुदींची अधिकृत प्रत पहा.</p>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग L — Audit Report लपवणे</h2>
-
-<h3>37. Audit Objection दडपणे</h3>
-<p>मागील Audit Report → Audit Note → Objection → Panchayat Reply → Compliance → Recovery → पुढील Audit.</p>
-
-<div class="danger-box">
-<strong>🚩 विशेष Red Flag:</strong>
-एकच objection अनेक वर्षे pending असल्यास कारण, जबाबदारी, recovery आणि compliance record तपासा.
-</div>
-</section>
-
-<section class="info-card">
-<h2>🟢 भाग M — Double / Overlapping Scheme</h2>
-
-<h3>38. एकच काम अनेक योजनांत दाखवणे</h3>
-<p>Finance Commission, PESA Fund, MGNREGA किंवा District Fund अशा वेगवेगळ्या योजनांत एकच asset/work दाखवला आहे का तपासा.</p>
-
-<div class="audit-flow">
-Work ID + Asset ID + Location + Estimate + MB + Payment
-</div>
-</section>
-
-<section class="info-card">
-<h2>📋 भाग N — PESA + सामान्य पंचायत योजना</h2>
-
-<div class="audit-table">
-<div class="audit-row"><strong>रस्ता</strong><span>सामान्य नियम + लागू असल्यास Gram Sabha approval</span></div>
-<div class="audit-row"><strong>पाणी</strong><span>सामान्य नियम + PESA resource/Gram Sabha role</span></div>
-<div class="audit-row"><strong>MGNREGA</strong><span>सामान्य नियम + Gram Sabha / Social Audit</span></div>
-<div class="audit-row"><strong>घरकुल</strong><span>Beneficiary selection तपासा</span></div>
-<div class="audit-row"><strong>स्ट्रीट लाईट</strong><span>लागू असल्यास Gram Sabha / project approval</span></div>
-<div class="audit-row"><strong>शाळा / आरोग्य</strong><span>Gram Sabha social-sector review</span></div>
-<div class="audit-row"><strong>बाजार</strong><span>लागू PESA provisions तपासा</span></div>
-<div class="audit-row"><strong>दारू</strong><span>सामान्य नियम + लागू PESA Rules</span></div>
-<div class="audit-row"><strong>लघुवनोपज</strong><span>Forest/Panchayat rules + PESA विशेष अधिकार</span></div>
-<div class="audit-row"><strong>गौण खनिज</strong><span>Mining rules + PESA Gram Sabha role</span></div>
-<div class="audit-row"><strong>आदिवासी जमीन</strong><span>Revenue laws + PESA Gram Sabha role</span></div>
-<div class="audit-row"><strong>PESA निधी</strong><span>Panchayat finance + विशेष PESA audit</span></div>
-<div class="audit-row"><strong>ग्रामसभा कोष</strong><span>Accounting + PESA transparency</span></div>
-<div class="audit-row"><strong>विकास प्रकल्प</strong><span>Panchayat rules + लागू PESA provisions</span></div>
-</div>
-</section>
-
-<section class="info-card important-card">
-<h2>🔥 PESA ग्रामपंचायतीचा “Complete Scam Audit”</h2>
-
-<div class="checklist">
-<div class="check">☐ PESA Status</div>
-<div class="check">☐ Notice</div>
-<div class="check">☐ 15 Clear Days</div>
-<div class="check">☐ Dispatch</div>
-<div class="check">☐ Agenda</div>
-<div class="check">☐ Attendance</div>
-<div class="check">☐ Quorum</div>
-<div class="check">☐ Chairperson</div>
-<div class="check">☐ Proceedings</div>
-<div class="check">☐ Resolution</div>
-
-<div class="check">☐ Secretary / Gram Sevak</div>
-<div class="check">☐ Records</div>
-<div class="check">☐ Resolution Implementation</div>
-<div class="check">☐ Work Report</div>
-<div class="check">☐ PESA 5% Fund</div>
-<div class="check">☐ Finance Commission</div>
-<div class="check">☐ State/Central Schemes</div>
-<div class="check">☐ MGNREGA</div>
-<div class="check">☐ Panchayat Revenue</div>
-<div class="check">☐ Gram Sabha Kosh</div>
-<div class="check">☐ Bank/Cash</div>
-<div class="check">☐ UC</div>
-
-<div class="check">☐ Proposal</div>
-<div class="check">☐ Administrative Sanction</div>
-<div class="check">☐ Technical Sanction</div>
-<div class="check">☐ Estimate</div>
-<div class="check">☐ Work Order</div>
-<div class="check">☐ MB</div>
-<div class="check">☐ Bill</div>
-<div class="check">☐ Payment</div>
-<div class="check">☐ Completion</div>
-<div class="check">☐ Asset</div>
-
-<div class="check">☐ Quotation</div>
-<div class="check">☐ Comparative Statement</div>
-<div class="check">☐ Supplier</div>
-<div class="check">☐ Invoice</div>
-<div class="check">☐ Stock</div>
-<div class="check">☐ Delivery</div>
-<div class="check">☐ Payment</div>
-
-<div class="check">☐ Muster</div>
-<div class="check">☐ Attendance</div>
-<div class="check">☐ Measurement</div>
-<div class="check">☐ Wage Payment</div>
-<div class="check">☐ Worker Verification</div>
-
-<div class="check">☐ Land</div>
-<div class="check">☐ Forest</div>
-<div class="check">☐ MFP</div>
-<div class="check">☐ Minor Minerals</div>
-<div class="check">☐ Water</div>
-<div class="check">☐ Community Resources</div>
-
-<div class="check">☐ Beneficiary Selection</div>
-<div class="check">☐ Intoxicants</div>
-<div class="check">☐ Market</div>
-<div class="check">☐ Labour Migration</div>
-<div class="check">☐ Land Alienation</div>
-<div class="check">☐ Audit Report</div>
-<div class="check">☐ Audit Objection</div>
-<div class="check">☐ Recovery</div>
-<div class="check">☐ Compliance</div>
-</div>
-</section>
-
-<section class="info-card">
-<h2>🎯 सर्वात मजबूत तपासणी पद्धत</h2>
-
-<p>एखाद्या ग्रामपंचायतीत “घोटाळा आहे” असे आधीच ठरवण्याऐवजी प्रत्येक प्रकरणात हा formula वापरा:</p>
-
-<div class="audit-flow">
-<span>कायदा / Rule</span>
-<span>↓ ग्रामसभा ठराव</span>
-<span>↓ मंजुरी</span>
-<span>↓ पैसा</span>
-<span>↓ काम</span>
-<span>↓ मोजमाप</span>
-<span>↓ बिल</span>
-<span>↓ Payment</span>
-<span>↓ प्रत्यक्ष स्थिती</span>
-<span>↓ Audit</span>
-</div>
-
-<p><strong>उदाहरण:</strong> ₹10 लाखांचा PESA विकास प्रकल्प असल्यास कायदेशीर तरतूद/Rule → Gram Sabha Resolution → Administrative/Technical Sanction → निधी → Work Order → MB → Bill → Payment → Completion Certificate → प्रत्यक्ष पाहणी असा पूर्ण trail तपासा.</p>
-
-<div class="warning-box">
-<strong>महत्त्वाचे:</strong>
-MB मध्ये ₹9.8 लाखांचे काम दाखवले आणि प्रत्यक्षात ₹5.5 लाखांचेच काम आढळले, तर ही महत्त्वाची financial/physical discrepancy आहे. त्यानंतर technical verification आणि सक्षम प्राधिकरणाची चौकशी आवश्यक ठरू शकते.
-</div>
-
-<p>PESA audit फक्त “पैसा कुठे गेला?” एवढ्यावर न थांबता चार स्तरांवर करा:
-<strong>ग्रामसभेचा अधिकार वापरला का → प्रक्रिया पाळली का → पैसा योग्य वापरला का → प्रत्यक्ष काम झाले का?</strong>
+<h2>घोटाळा / गैरव्यवहार तपासणी</h2>
+<p>
+PESA क्षेत्रातील ग्रामपंचायत आणि ग्रामसभा यांच्या कामकाजात कागदोपत्री प्रक्रिया,
+निधी, विकासकामे, लाभार्थी निवड, खरेदी, नैसर्गिक संसाधने आणि लेखापरीक्षण
+यामध्ये होऊ शकणारे गैरव्यवहार ओळखण्यासाठी हा सविस्तर नागरिक ऑडिट मार्गदर्शक आहे.
 </p>
 </section>
 
 <section class="info-card">
-<h2>⚠️ कायदेशीर सूचना</h2>
-<p>हे पान नागरिकांना संभाव्य discrepancies ओळखण्यासाठी आणि कागदपत्रांची पडताळणी करण्यासाठी मार्गदर्शक आहे. पुराव्याशिवाय कोणत्याही व्यक्ती किंवा संस्थेला “घोटाळेबाज” ठरवू नये. अंतिम निष्कर्षापूर्वी संबंधित कायदा, Rules, शासन निर्णय, अधिकृत records आणि लागू न्यायनिर्णयांची अद्ययावत मूळ प्रत तपासा.</p>
+<h2>सर्वात महत्त्वाची गोष्ट</h2>
+<p>
+एखाद्या व्यक्तीला किंवा अधिकाऱ्याला पुरावा नसताना “घोटाळेबाज” किंवा “भ्रष्ट” म्हणू नका.
+प्रथम <strong>अधिकृत कागदपत्रे, ग्रामसभा ठराव, मंजुरी, निधी, मोजमाप, बिल, पेमेंट आणि
+प्रत्यक्ष काम</strong> यांची पडताळणी करा. विसंगती आढळल्यास ती कागदपत्रांच्या आधारे
+लेखी स्वरूपात मांडावी.
+</p>
+<div class="badge">पुरावा प्रथम</div>
+<div class="badge">कागदपत्रांची पडताळणी</div>
+<div class="badge">ग्रामसभा ठराव</div>
+<div class="badge">प्रत्यक्ष पाहणी</div>
+<div class="badge">ऑडिट</div>
+</section>
 
-<div class="highlight-box">
-<strong>पुरावा मिळवा → Cross-check करा → संबंधित कार्यालयाकडून स्पष्टीकरण मागा → आवश्यक असल्यास RTI / सक्षम प्राधिकरणाकडे तक्रार करा.</strong>
+<section>
+<h2>A. ग्रामसभा बनावट किंवा फक्त कागदोपत्री दाखवणे</h2>
+
+<div class="scam-card">
+<h3><span class="number">1.</span> बनावट ग्रामसभा दाखवणे</h3>
+<p>
+प्रत्यक्षात ग्रामसभा झाली नसताना ती झाल्याचे दाखवणे, ठरावाची तारीख दाखवणे किंवा
+उपस्थिती/कार्यवाही तयार करणे हा गंभीर प्रकार असू शकतो.
+</p>
+<h4>काय तपासावे?</h4>
+<ul>
+<li>ग्रामसभा बोलावण्याची सूचना/नोटीस</li>
+<li>नोटीस प्रसिद्ध/चिकटविल्याचा पुरावा</li>
+<li>ग्रामसभा कार्यवाही पुस्तक</li>
+<li>उपस्थिती नोंदवही</li>
+<li>ठराव क्रमांक आणि तारीख</li>
+<li>ग्रामसभेच्या आधी व नंतरच्या कागदपत्रांच्या तारखा</li>
+</ul>
+<div class="redflag"><strong>Red Flag:</strong> उपस्थितीमध्ये एकाच प्रकारची सही, एकाच पेनची शाई, अनुपस्थित व्यक्तीची सही किंवा ग्रामसभा झाल्याचा स्वतंत्र पुरावा नसणे.</div>
 </div>
+
+<div class="scam-card">
+<h3><span class="number">2.</span> बनावट किंवा Backdated 15 दिवसांची नोटीस</h3>
+<p>
+ग्रामसभा नियमानुसार वेळेत कळवली नसताना नंतर मागील तारीख टाकून नोटीस तयार करणे,
+किंवा नोटीस प्रत्यक्षात प्रसिद्ध न करता “नोटीस दिली” असे दाखवणे.
+</p>
+<h4>काय तपासावे?</h4>
+<ul>
+<li>नोटीसची तारीख</li>
+<li>ग्रामसभेची तारीख</li>
+<li>नोटीस प्रसिद्ध करण्याचा पुरावा</li>
+<li>नोटीस बोर्ड/गावातील प्रसिद्धीचा पुरावा</li>
+<li>नोटीस पाठविल्याची नोंद</li>
+</ul>
+<div class="redflag"><strong>Red Flag:</strong> नोटीसची तारीख आणि प्रत्यक्ष प्रसिद्धीचा पुरावा जुळत नाही; किंवा नोटीस ग्रामसभेनंतर तयार झाल्याचे संकेत मिळतात.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">3.</span> बनावट उपस्थिती नोंद</h3>
+<p>
+ग्रामसभेला न आलेल्या व्यक्तींच्या सह्या दाखवणे, नावांची नंतर भर घालणे किंवा
+उपस्थितीची संख्या कृत्रिमरीत्या वाढवणे.
+</p>
+<h4>काय तपासावे?</h4>
+<ul>
+<li>मूळ उपस्थिती रजिस्टर</li>
+<li>नावे, सह्या/अंगठे</li>
+<li>ग्रामस्थांकडून स्वतंत्र पडताळणी</li>
+<li>एकाच व्यक्तीच्या सहीची शैली</li>
+<li>नोंदवहीतील पाने/क्रमांक</li>
+</ul>
+<div class="redflag"><strong>Red Flag:</strong> अनेक सह्या हुबेहुब सारख्या दिसणे, मृत/स्थलांतरित व्यक्तीची उपस्थिती किंवा एकाच व्यक्तीने अनेक सह्या केल्याचा संशय.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">4.</span> गणपूर्ती (Quorum) मध्ये फेरफार</h3>
+<p>
+ग्रामसभा प्रत्यक्षात आवश्यक उपस्थितीशिवाय झाली असताना गणपूर्ती पूर्ण असल्याचे दाखवणे,
+किंवा उपस्थिती नोंद वाढवून ठराव वैध दाखवण्याचा प्रयत्न करणे.
+</p>
+<h4>तपासणी:</h4>
+<p>
+लागू असलेला PESA कायदा/राज्य नियम/शासन निर्णय तपासा आणि त्यानुसार आवश्यक गणपूर्ती,
+उपस्थिती आणि ग्रामसभेची प्रक्रिया पूर्ण झाली का हे पडताळा.
+</p>
+<div class="records"><strong>कागदपत्रे:</strong> उपस्थिती रजिस्टर + ग्रामसभा कार्यवाही + नोटीस + ठराव + लागू नियम.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">5.</span> ठरावात फेरफार / Resolution Alteration</h3>
+<p>
+ग्रामसभेने एक निर्णय घेतला असताना नंतर कार्यवाहीत वेगळा मजकूर लिहिणे,
+ठरावातील रक्कम/काम/लाभार्थी बदलणे किंवा रिकाम्या जागेत नंतर मजकूर भरणे.
+</p>
+<h4>काय तपासावे?</h4>
+<ul>
+<li>मूळ ठराव पुस्तक</li>
+<li>ठराव क्रमांक</li>
+<li>ठरावाची तारीख</li>
+<li>कार्यवाहीतील संपूर्ण मजकूर</li>
+<li>त्या ठरावावर आधारित पुढील मंजुरी/आदेश</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>B. PESA अधिकारांचा गैरवापर</h2>
+
+<div class="scam-card">
+<h3><span class="number">6.</span> ग्रामसभेची मंजुरी न घेता विकासकाम</h3>
+<p>
+PESA क्षेत्रात ग्रामसभेच्या अधिकारांना लागू असलेल्या तरतुदींचा विचार न करता
+काम मंजूर/अंमलात आणणे किंवा ग्रामसभेच्या आवश्यक सहभागाशिवाय निर्णय घेणे.
+</p>
+<h4>तपासा:</h4>
+<p>
+काम कोणत्या योजनेतून आहे? त्या योजनेत ग्रामसभेची भूमिका काय आहे? ठराव झाला का?
+मंजुरी कोणत्या अधिकाऱ्याने दिली? ग्रामसभेचा निर्णय आणि प्रशासकीय आदेश जुळतात का?
+</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">7.</span> ग्रामसभेचा निर्णय दुर्लक्षित करणे</h3>
+<p>
+ग्रामसभेने स्पष्ट निर्णय घेतल्यानंतरही त्याच्या विरुद्ध काम करणे, निर्णय बदलल्याचा
+पुरावा नसताना दुसरा निर्णय दाखवणे किंवा ठरावाची अंमलबजावणी न करणे.
+</p>
+<div class="redflag"><strong>तपासा:</strong> ग्रामसभा ठराव → अधिकृत आदेश → प्रत्यक्ष अंमलबजावणी या तीनही स्तरांची तुलना करा.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">8.</span> लाभार्थी निवडीत अनियमितता</h3>
+<p>
+लाभार्थी निवडीत नियम/निकष न पाळणे, पात्र व्यक्ती वगळणे, अपात्र व्यक्तीचा समावेश,
+राजकीय/वैयक्तिक पक्षपात किंवा ग्रामसभेच्या प्रक्रियेपासून निवड लपवणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>योजनेचे पात्रता निकष</li>
+<li>ग्रामसभा ठराव/लाभार्थी यादी</li>
+<li>अर्ज व कागदपत्रे</li>
+<li>अंतिम मंजूर यादी</li>
+<li>लाभ प्रत्यक्ष मिळाला का?</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>C. विकासकामांमधील घोटाळे</h2>
+
+<div class="scam-card">
+<h3><span class="number">9.</span> काम अपूर्ण, पण कागदावर पूर्ण</h3>
+<p>
+रस्ता, नाली, पाणी योजना, इमारत, शौचालय, बांधकाम किंवा इतर काम पूर्ण नसताना
+Completion/पूर्ण काम दाखवून निधी खर्च करणे.
+</p>
+<div class="redflag"><strong>सर्वात महत्त्वाची तपासणी:</strong> कागदावरील पूर्ण काम आणि प्रत्यक्ष स्थळावरील काम यांची तुलना करा.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">10.</span> Estimate फुगवणे</h3>
+<p>
+प्रत्यक्षात कमी खर्चाचे काम असताना अंदाजपत्रकात प्रमाण, साहित्य, मजुरी किंवा
+इतर घटकांची किंमत अनावश्यकपणे वाढवणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>मंजूर अंदाजपत्रक</li>
+<li>BOQ/कामाचे प्रमाण</li>
+<li>Schedule of Rates लागू असल्यास त्यातील दर</li>
+<li>प्रत्यक्ष वापरलेले साहित्य</li>
+<li>प्रत्यक्ष कामाचे प्रमाण</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">11.</span> बनावट Measurement Book (MB)</h3>
+<p>
+प्रत्यक्षात जितके काम झाले नाही तितके काम मोजमाप पुस्तकात दाखवणे किंवा
+मोजमाप न करता प्रमाण नोंदवणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>MB मधील प्रत्येक measurement</li>
+<li>लांबी × रुंदी × खोली/इतर लागू मोजमाप</li>
+<li>प्रत्यक्ष स्थळावरील मोजमाप</li>
+<li>मोजमाप करणाऱ्या अधिकाऱ्याची नोंद</li>
+<li>बिलातील quantity आणि MB quantity</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">12.</span> बनावट Completion Certificate</h3>
+<p>
+काम पूर्ण नसताना पूर्णत्व प्रमाणपत्र देणे किंवा प्रत्यक्ष कामाच्या स्थितीशी न जुळणारे
+प्रमाणपत्र वापरून पेमेंट घेणे.
+</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">13.</span> Double Payment</h3>
+<p>
+एकाच कामासाठी किंवा त्याच खर्चासाठी दोन वेगवेगळ्या बिलांमधून/योजनांमधून
+पुन्हा पेमेंट होणे.
+</p>
+<h4>तपासा:</h4>
+<p>
+Work ID, bill number, voucher, payment date, amount, bank/payment record,
+scheme आणि कामाचे नाव यांची cross-check करा.
+</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">14.</span> कामाचे तुकडे करून नियम टाळणे</h3>
+<p>
+एक मोठे काम जाणीवपूर्वक अनेक लहान कामांमध्ये विभागून मंजुरी/खरेदी/निविदा किंवा
+इतर लागू प्रक्रिया टाळण्याचा प्रयत्न होतो का ते तपासा.
+</p>
+<div class="redflag"><strong>Red Flag:</strong> एकाच ठिकाणी, एकाच कालावधीत, एकाच प्रकारची कामे वेगवेगळ्या नावाने आणि जवळजवळ समान रकमेने दाखवली आहेत.</div>
+</div>
+</section>
+
+<section>
+<h2>D. खरेदी आणि Procurement मधील गैरव्यवहार</h2>
+
+<div class="scam-card">
+<h3><span class="number">15.</span> बनावट Bills</h3>
+<p>
+साहित्य/सेवा प्रत्यक्ष घेतली नसताना बिल दाखवणे किंवा प्रत्यक्ष खरेदीपेक्षा वेगळ्या
+साहित्याचे बिल वापरणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>मूळ invoice</li>
+<li>supplier details</li>
+<li>GST/नोंदणी माहिती लागू असल्यास</li>
+<li>Stock register</li>
+<li>Delivery/receipt</li>
+<li>प्रत्यक्ष वापर</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">16.</span> दर फुगवणे</h3>
+<p>
+बाजारभावापेक्षा अवाजवी किंमत दाखवून निधी खर्च करणे.
+</p>
+<p><strong>तपासणी:</strong> त्या कालावधीतील उपलब्ध अधिकृत दर/कोटेशन/खरेदी प्रक्रिया आणि
+समान वस्तूंचे तुलनात्मक दर तपासा.</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">17.</span> बनावट Supplier</h3>
+<p>
+प्रत्यक्ष अस्तित्वात नसलेला किंवा व्यवहार न केलेला supplier कागदावर दाखवणे.
+</p>
+<div class="redflag"><strong>तपासा:</strong> supplier चा पत्ता, बिल, खाते, मालाची delivery, stock entry आणि payment trail.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">18.</span> एकाच Supplier ला वारंवार काम</h3>
+<p>
+प्रत्येक खरेदीत किंवा अनेक कामांमध्ये एकाच supplier ला वारंवार काम/पुरवठा देण्यात
+आला आहे का आणि त्यामागे वैध कारण व नियमबद्ध प्रक्रिया आहे का हे तपासा.
+</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">19.</span> Stock Register Fraud</h3>
+<p>
+साहित्य आलेले नाही तरी stock entry करणे, stock वापरल्याचे दाखवणे किंवा
+स्टॉक नोंद आणि प्रत्यक्ष उपलब्ध साहित्य यामध्ये फरक असणे.
+</p>
+<h4>Cross-check:</h4>
+<p>Purchase Bill → Delivery → Stock Entry → Issue Register → Work Site → Remaining Stock</p>
+</div>
+</section>
+
+<section>
+<h2>E. मजुरी / MGNREGA मधील गैरव्यवहार</h2>
+
+<div class="scam-card">
+<h3><span class="number">20.</span> बनावट Muster Roll</h3>
+<p>
+प्रत्यक्ष काम न केलेल्या व्यक्तींची नावे muster मध्ये दाखवणे, कामाचे दिवस वाढवणे
+किंवा उपस्थिती आणि प्रत्यक्ष कामामध्ये फरक असणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>Muster roll</li>
+<li>कामाचे दिवस</li>
+<li>कामाच्या ठिकाणाची उपस्थिती</li>
+<li>मजुरांची स्वतंत्र पडताळणी</li>
+<li>उपलब्ध असल्यास payment record</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">21.</span> मजुरी दुसऱ्याच्या नावावर / पैशाचा गैरवापर</h3>
+<p>
+ज्या व्यक्तीने काम केले त्या व्यक्तीला पूर्ण/योग्य मजुरी मिळाली का, payment record
+मधील लाभार्थी आणि प्रत्यक्ष मजूर जुळतो का हे तपासा.
+</p>
+<div class="redflag"><strong>Red Flag:</strong> मजुराला त्याच्या नावावर दाखवलेली रक्कम मिळालेली नसणे किंवा payment record व प्रत्यक्ष व्यक्तीमध्ये विसंगती.</div>
+</div>
+</section>
+
+<section>
+<h2>F. निधी आणि PESA संबंधित पैसा</h2>
+
+<div class="scam-card">
+<h3><span class="number">22.</span> PESA 5% Untied Fund चा गैरवापर</h3>
+<p>
+PESA क्षेत्रासाठी उपलब्ध असलेल्या untied निधीचा उपयोग नियम, मंजुरी आणि ग्रामसभेच्या
+भूमिकेच्या विरुद्ध करणे, निधी दुसरीकडे वळवणे किंवा कागदोपत्री खर्च दाखवणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>निधी किती प्राप्त झाला?</li>
+<li>कधी प्राप्त झाला?</li>
+<li>कोणत्या खात्यात जमा झाला?</li>
+<li>ग्रामसभा ठराव कोणता?</li>
+<li>कोणत्या कामासाठी मंजूर?</li>
+<li>किती खर्च?</li>
+<li>शिल्लक किती?</li>
+<li>प्रत्यक्ष काम झाले का?</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">23.</span> Gram Sabha Kosh चा गैरवापर</h3>
+<p>
+ग्रामसभेच्या नावाने/निधीत उपलब्ध पैसा वैध उद्देशाशिवाय खर्च करणे,
+हिशोब न देणे किंवा मंजुरीशिवाय व्यवहार करणे.
+</p>
+<h4>तपासा:</h4>
+<p>खातेवही, cashbook, bank statement, vouchers, resolutions आणि expenditure यांची तुलना करा.</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">24.</span> निधी आला पण काम नाही</h3>
+<p>
+निधी प्राप्त झाल्याचे सरकारी नोंदीत दिसते; खर्च झाल्याचे दाखवले जाते; पण
+प्रत्यक्ष स्थळावर काम नाही किंवा अत्यल्प काम आहे.
+</p>
+<div class="redflag"><strong>महत्त्वाचे:</strong> Receipt → Expenditure → Work → Physical Verification या चारही टप्प्यांची पडताळणी करा.</div>
+</div>
+</section>
+
+<section>
+<h2>G. नैसर्गिक संसाधनांशी संबंधित गैरव्यवहार</h2>
+
+<div class="scam-card">
+<h3><span class="number">25.</span> लघु वनउत्पादन (MFP) संदर्भातील गैरव्यवहार</h3>
+<p>
+PESA क्षेत्रातील लघु वनउत्पादनांवरील लागू ग्रामसभा/स्थानिक अधिकार, संकलन,
+व्यवस्थापन, विक्री किंवा उत्पन्नाशी संबंधित प्रक्रियेत पारदर्शकता नसणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>ग्रामसभा ठराव</li>
+<li>उत्पादनाचे प्रमाण</li>
+<li>संकलन/विक्री नोंदी</li>
+<li>दर</li>
+<li>प्राप्त उत्पन्न</li>
+<li>ग्रामसभा/समुदायाला मिळालेला लाभ</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">26.</span> Minor Minerals संदर्भातील गैरव्यवहार</h3>
+<p>
+वाळू, दगड, मुरूम किंवा इतर लागू लघु खनिज संसाधनांच्या वापर/उत्खननात
+ग्रामसभेच्या लागू अधिकारांकडे दुर्लक्ष, परवानगी प्रक्रिया किंवा महसूल यामध्ये
+अनियमितता आहे का ते तपासा.
+</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">27.</span> आदिवासी जमिनीशी संबंधित अनियमितता</h3>
+<p>
+आदिवासी जमीन, हस्तांतरण, वापर, अतिक्रमण किंवा संबंधित व्यवहारात लागू कायदे,
+परवानग्या आणि ग्रामसभेची भूमिका यांचे उल्लंघन झाले आहे का ते तपासा.
+</p>
+<div class="redflag"><strong>तपासा:</strong> 7/12, फेरफार, मालकी नोंद, आदेश, परवानगी, संबंधित प्राधिकरणाचे कागद आणि प्रत्यक्ष ताबा.</div>
+</div>
+</section>
+
+<section>
+<h2>H. दारू आणि आठवडी बाजार</h2>
+
+<div class="scam-card">
+<h3><span class="number">28.</span> दारू दुकानासंबंधी ग्रामसभा अधिकारांचा गैरवापर</h3>
+<p>
+दारूविषयक निर्णयांमध्ये PESA/राज्य कायदे/नियमांनुसार ग्रामसभेची लागू भूमिका,
+संमती/निर्णय किंवा नियंत्रणाची प्रक्रिया पाळली आहे का ते तपासा.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>ग्रामसभा ठराव</li>
+<li>दारू दुकानाची परवानगी/लायसन्स</li>
+<li>लागू नियम</li>
+<li>ग्रामसभेच्या निर्णयाची अंमलबजावणी</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">29.</span> आठवडी बाजारातील अनियमितता</h3>
+<p>
+आठवडी बाजारातील जागा, शुल्क, परवाने, दुकानदारांकडून वसुली, बाजार व्यवस्थापन
+किंवा उत्पन्नाच्या वापरात अनियमितता आहे का ते तपासा.
+</p>
+<h4>तपासा:</h4>
+<p>Fee register → Receipt book → Bank/Cashbook → खर्च → लागू ग्रामसभा निर्णय.</p>
+</div>
+</section>
+
+<section>
+<h2>I. पंचायत मालमत्ता</h2>
+
+<div class="scam-card">
+<h3><span class="number">30.</span> पंचायत मालमत्ता चोरी/गायब</h3>
+<p>
+पाणी पंप, मोटर, संगणक, फर्निचर, सोलर उपकरणे, स्ट्रीट लाइट किंवा इतर पंचायत
+मालमत्ता नोंदीत असून प्रत्यक्षात उपलब्ध नसणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>Asset Register</li>
+<li>Stock Register</li>
+<li>खरेदी बिल</li>
+<li>मालमत्तेचा serial/asset number</li>
+<li>प्रत्यक्ष physical verification</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">31.</span> पंचायत जमीन/दुकान/मालमत्ता अनियमितता</h3>
+<p>
+पंचायत मालमत्ता भाड्याने देताना, वापर देताना किंवा हस्तांतरित करताना लागू प्रक्रिया,
+ठराव, करार आणि महसूल नोंदींचे पालन झाले का ते तपासा.
+</p>
+</div>
+</section>
+
+<section>
+<h2>J. कर आणि वसुली</h2>
+
+<div class="scam-card">
+<h3><span class="number">32.</span> घरपट्टी/पाणीपट्टी वसुलीतील गैरव्यवहार</h3>
+<p>
+नागरिकांकडून कर/पट्टी वसूल करून पावती न देणे, कमी/जास्त रक्कम नोंदवणे,
+cashbook मध्ये न दाखवणे किंवा जमा रक्कम आणि अधिकृत नोंदीत फरक असणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>Receipt Book</li>
+<li>Tax Register</li>
+<li>Cashbook</li>
+<li>Bank Deposit</li>
+<li>थकबाकी नोंद</li>
+</ul>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">33.</span> Unauthorized Fees / बेकायदेशीर शुल्क</h3>
+<p>
+कायदेशीर अधिकार/मंजुरी नसताना नागरिकांकडून शुल्क आकारले जाते का,
+आकारलेली रक्कम अधिकृत आहे का आणि त्याची पावती दिली जाते का ते तपासा.
+</p>
+</div>
+</section>
+
+<section>
+<h2>K. कर्मचारी आणि प्रशासकीय गैरव्यवहार</h2>
+
+<div class="scam-card">
+<h3><span class="number">34.</span> कर्मचारी बनावट उपस्थिती</h3>
+<p>
+कर्मचारी/कामगार प्रत्यक्ष कामावर नसतानाही उपस्थित दाखवणे किंवा attendance record
+आणि प्रत्यक्ष उपस्थितीमध्ये फरक असणे.
+</p>
+<div class="records"><strong>तपासा:</strong> Attendance Register + Duty Record + संबंधित कामाची नोंद + वेतन नोंद.</div>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">35.</span> काम न करता Salary / वेतन</h3>
+<p>
+प्रत्यक्ष सेवा/कामाबाबत विसंगती असताना वेतन पूर्णपणे अदा केले आहे का,
+अनधिकृत अनुपस्थिती असूनही वेतन दिले आहे का हे तपासा.
+</p>
+</div>
+
+<div class="scam-card">
+<h3><span class="number">36.</span> ग्रामसभा ठरावाची अंमलबजावणी न करणे</h3>
+<p>
+ग्रामसभेने केलेल्या निर्णयावर कोणतीही कारवाई न करणे, निर्णयाची अंमलबजावणी
+थांबवणे किंवा त्याबाबत नागरिकांना माहिती न देणे.
+</p>
+<h4>तपासा:</h4>
+<p>
+ठराव → संबंधित कार्यालयाकडे पाठवलेली नोंद → प्राप्ती → Action Taken Report →
+प्रत्यक्ष परिणाम.
+</p>
+</div>
+</section>
+
+<section>
+<h2>L. Audit मधील गैरव्यवहार</h2>
+
+<div class="scam-card">
+<h3><span class="number">37.</span> Audit Objections लपवणे</h3>
+<p>
+लेखापरीक्षणात आक्षेप नोंदवले असताना ते नागरिकांपासून लपवणे, आक्षेपांची पूर्तता
+न करता झालेले दाखवणे किंवा audit report/Action Taken Report उपलब्ध न करून देणे.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>Audit Report</li>
+<li>Audit objections</li>
+<li>Compliance Report</li>
+<li>Recovery/वसुलीची नोंद</li>
+<li>जबाबदारी निश्चिती</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>M. Double / Overlapping Schemes</h2>
+
+<div class="scam-card">
+<h3><span class="number">38.</span> एकाच कामासाठी दोन योजना / दोन निधी</h3>
+<p>
+एकाच रस्ता, नाली, इमारत, पाणी योजना किंवा इतर कामासाठी दोन वेगवेगळ्या योजनांमधून
+निधी दाखवला आहे का, किंवा एका योजनेत पूर्ण झालेला खर्च दुसऱ्या योजनेत पुन्हा
+दाखवला आहे का ते तपासा.
+</p>
+<h4>तपासा:</h4>
+<ul>
+<li>कामाचे नाव</li>
+<li>कामाचे ठिकाण</li>
+<li>Work ID</li>
+<li>मंजूर रक्कम</li>
+<li>योजना</li>
+<li>Bill/Voucher</li>
+<li>MB</li>
+<li>Payment</li>
+</ul>
+<div class="redflag"><strong>Red Flag:</strong> नाव वेगळे पण location, quantity, फोटो, MB किंवा कामाचे physical output समान असणे.</div>
+</div>
+</section>
+
+<section class="warning-box">
+<h2>N. PESA + सामान्य ग्रामपंचायत योजना : दोन्ही वेगळे तपासा</h2>
+<p>
+PESA क्षेत्रात ग्रामसभेचे विशेष अधिकार असू शकतात; पण प्रत्येक विकासकामाला
+आपोआप एकच प्रक्रिया लागू होते असे गृहीत धरू नका. <strong>संबंधित PESA तरतूद,
+राज्य कायदा, नियम, शासन निर्णय, योजनेची guidelines आणि निधीचा स्रोत</strong>
+तपासून ग्रामसभेची नेमकी भूमिका निश्चित करा.
+</p>
+<table class="audit-table">
+<thead>
+<tr>
+<th>तपासणी</th>
+<th>काय पाहायचे?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>कायदा/नियम</td>
+<td>त्या कामाला कोणता कायदा/Rule/GR लागू?</td>
+</tr>
+<tr>
+<td>ग्रामसभा</td>
+<td>ठराव/मंजुरी/शिफारस/संमती यापैकी कोणती भूमिका लागू?</td>
+</tr>
+<tr>
+<td>योजना</td>
+<td>निधी कोणत्या योजनेतून आला?</td>
+</tr>
+<tr>
+<td>मंजुरी</td>
+<td>Administrative/Technical/Sanction कोणाकडून?</td>
+</tr>
+<tr>
+<td>खर्च</td>
+<td>मंजूर रक्कम आणि प्रत्यक्ष खर्च किती?</td>
+</tr>
+<tr>
+<td>काम</td>
+<td>प्रत्यक्ष किती काम झाले?</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="danger-box">
+<h2>🔎 Complete Scam Audit — पूर्ण तपासणी Checklist</h2>
+<p>
+खालील प्रत्येक टप्पा तपासल्याशिवाय “घोटाळा झाला” असा निष्कर्ष काढू नका.
+</p>
+
+<ul class="checklist">
+<li class="check"><strong>1. ग्रामसभा Notice:</strong> तारीख, प्रसिद्धी आणि प्रक्रिया तपासा.</li>
+<li class="check"><strong>2. उपस्थिती:</strong> प्रत्यक्ष उपस्थित व्यक्ती आणि register जुळवा.</li>
+<li class="check"><strong>3. Quorum:</strong> लागू नियमाप्रमाणे गणपूर्ती तपासा.</li>
+<li class="check"><strong>4. कार्यवाही:</strong> minutes आणि ठरावाचा मूळ मजकूर तपासा.</li>
+<li class="check"><strong>5. Resolution:</strong> ठरावावर आधारित पुढील कारवाई जुळते का?</li>
+<li class="check"><strong>6. योजना:</strong> काम कोणत्या scheme मधून आहे?</li>
+<li class="check"><strong>7. Sanction:</strong> मंजुरी वैध आहे का?</li>
+<li class="check"><strong>8. Estimate:</strong> अंदाजपत्रक आणि प्रमाण तपासा.</li>
+<li class="check"><strong>9. Tender/Procurement:</strong> लागू प्रक्रिया पाळली का?</li>
+<li class="check"><strong>10. Supplier:</strong> supplier वास्तविक आहे का?</li>
+<li class="check"><strong>11. Bill:</strong> बिलातील वस्तू/सेवा प्रत्यक्ष मिळाली का?</li>
+<li class="check"><strong>12. Stock:</strong> stock entry आणि प्रत्यक्ष stock जुळतो का?</li>
+<li class="check"><strong>13. MB:</strong> measurement प्रत्यक्ष कामाशी जुळते का?</li>
+<li class="check"><strong>14. Completion:</strong> काम खरोखर पूर्ण आहे का?</li>
+<li class="check"><strong>15. Payment:</strong> payment कोणाला आणि किती?</li>
+<li class="check"><strong>16. Bank/Cashbook:</strong> खाते आणि नोंदी जुळतात का?</li>
+<li class="check"><strong>17. Physical Verification:</strong> स्थळावर प्रत्यक्ष पाहणी करा.</li>
+<li class="check"><strong>18. Beneficiary:</strong> लाभार्थी पात्र आहे का?</li>
+<li class="check"><strong>19. Muster:</strong> प्रत्यक्ष मजूर आणि muster जुळतो का?</li>
+<li class="check"><strong>20. Audit:</strong> audit objections आणि compliance तपासा.</li>
+<li class="check"><strong>21. Double Funding:</strong> त्याच कामावर दुसरा निधी तर नाही?</li>
+<li class="check"><strong>22. Asset Register:</strong> खरेदी केलेली मालमत्ता प्रत्यक्ष आहे का?</li>
+<li class="check"><strong>23. Tax/Fees:</strong> वसुलीची रक्कम पूर्ण जमा झाली का?</li>
+<li class="check"><strong>24. Natural Resources:</strong> MFP/minor minerals/land बाबत लागू अधिकार तपासा.</li>
+</ul>
+</section>
+
+<section class="highlight-box">
+<h2>सर्वात मजबूत Audit Method</h2>
+<div class="audit-flow">
+कायदा / Rule
+<br>↓<br>
+ग्रामसभा ठराव
+<br>↓<br>
+मंजुरी
+<br>↓<br>
+पैसा प्राप्त
+<br>↓<br>
+काम
+<br>↓<br>
+मोजमाप (MB)
+<br>↓<br>
+बिल
+<br>↓<br>
+Payment
+<br>↓<br>
+प्रत्यक्ष स्थिती
+<br>↓<br>
+Audit
+</div>
+
+<h3>उदाहरण — ₹10 लाखांचे काम</h3>
+<p>
+समजा एखाद्या कामासाठी <strong>₹10,00,000</strong> मंजूर झाले. MB मध्ये
+<strong>₹9,80,000</strong> इतके काम झाले असे दाखवले आहे; पण प्रत्यक्ष स्थळ
+पाहणीमध्ये केवळ <strong>₹5,50,000</strong> इतक्याच कामाचे प्रमाण आढळते.
+</p>
+<p>
+अशा वेळी फक्त “₹4,30,000 चा घोटाळा झाला” असे लगेच म्हणू नये. प्रथम
+<strong>मोजमाप, दर, quantity, MB entry, bill, payment, completion certificate
+आणि प्रत्यक्ष काम</strong> यांची तांत्रिक/कागदोपत्री पडताळणी करावी.
+विसंगती सिद्ध झाल्यास संबंधित सक्षम प्राधिकरणाकडे पुराव्यासह तक्रार/लेखी अर्ज करता येतो.
+</p>
+</section>
+
+<section class="info-card">
+<h2>घोटाळा शोधताना कोणती कागदपत्रे मागावीत?</h2>
+<ul>
+<li>ग्रामसभा नोटीस</li>
+<li>उपस्थिती रजिस्टर</li>
+<li>ग्रामसभा कार्यवाही पुस्तक</li>
+<li>ठरावांची प्रमाणित प्रत</li>
+<li>ग्रामपंचायत ठराव पुस्तक</li>
+<li>Cashbook</li>
+<li>Bank Statement</li>
+<li>Voucher Register</li>
+<li>Receipt Book</li>
+<li>Tax/Collection Register</li>
+<li>Stock Register</li>
+<li>Asset Register</li>
+<li>Estimate आणि BOQ</li>
+<li>Administrative/Technical sanction</li>
+<li>Measurement Book</li>
+<li>Work Order</li>
+<li>Completion Certificate</li>
+<li>Running/Final Bills</li>
+<li>Payment details</li>
+<li>Supplier quotations/tender/procurement records</li>
+<li>MGNREGA Muster Roll आणि संबंधित payment records</li>
+<li>लाभार्थी यादी आणि निवड प्रक्रिया</li>
+<li>Audit Report</li>
+<li>Audit Objection</li>
+<li>Compliance / Action Taken Report</li>
+<li>योजनेनुसार उपलब्ध इतर सरकारी नोंदी</li>
+</ul>
+</section>
+
+<section class="warning-box">
+<h2>कायदेशीर सावधानता ⚖️</h2>
+<p>
+PESA ग्रामसभा, ग्रामपंचायत, अधिकारी किंवा कोणत्याही व्यक्तीविरुद्ध आरोप करताना
+<strong>अधिकृत कायदा, नियम, शासन निर्णय, आदेश, ग्रामसभा नोंदी, आर्थिक कागदपत्रे,
+लेखापरीक्षण अहवाल आणि प्रत्यक्ष पडताळणी</strong> यांचा आधार घ्या.
+</p>
+<p>
+सर्वच ग्रामपंचायतींना प्रत्येक विषयावर समान अधिकार किंवा समान प्रक्रिया लागू असेलच
+असे नाही. संबंधित क्षेत्र, योजना, निधीचा स्रोत आणि त्या वेळेस लागू असलेले
+कायदे/नियम तपासणे आवश्यक आहे.
+</p>
+<p>
+हा पृष्ठ नागरिकांना प्राथमिक दस्तऐवज-आधारित तपासणी समजण्यासाठी तयार केलेला
+माहिती मार्गदर्शक आहे. अंतिम कायदेशीर निष्कर्ष किंवा दोष निश्चिती सक्षम
+प्राधिकरण/न्यायालयाच्या प्रक्रियेतच होते.
+</p>
+</section>
+
+<section>
+<h2>पुढची पायरी</h2>
+<p>
+एखाद्या कामात संशय असल्यास प्रथम कागदपत्रे मिळवा, नंतर कागदपत्रांमधील आकडे
+एकमेकांशी जुळवा आणि शेवटी प्रत्यक्ष स्थळाची पडताळणी करा. शक्य असल्यास
+<strong>RTI + ग्रामसभा नोंदी + आर्थिक नोंदी + प्रत्यक्ष पाहणी</strong> या चारही
+स्त्रोतांचा एकत्र वापर करा.
+</p>
 </section>
 
 </main>
 
 <footer>
-<p><strong>Maharashtra PESA Citizen Portal</strong></p>
-<p>नागरिक जागरूकता • कागदपत्राधारित पडताळणी • कायदेशीर माहिती</p>
+<p>© Maharashtra PESA Citizen Portal | नागरिकांसाठी माहिती व दस्तऐवज-आधारित पडताळणी</p>
 </footer>
 
 </body>
 </html>
+
