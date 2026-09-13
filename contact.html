@@ -14,189 +14,345 @@
     body {
       margin: 0;
       font-family: Arial, "Noto Sans Devanagari", sans-serif;
-      background: #f6f8fb;
-      color: #1f2937;
+      color: #172033;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(76,175,80,.16), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(33,150,243,.14), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(156,39,176,.10), transparent 30%),
+        #f4f9f7;
     }
 
     /* HEADER */
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 18px 20px;
       text-align: center;
+      padding: 28px 18px 24px;
+      background: linear-gradient(
+        135deg,
+        #e8f8ee,
+        #eef8ff,
+        #fff4e8
+      );
+      border-bottom: 1px solid #d9e8df;
     }
 
     header h1 {
       margin: 0;
-      font-size: 25px;
+      color: #155e3b;
+      font-size: clamp(25px, 6vw, 38px);
+      font-weight: 800;
     }
 
     header p {
-      margin: 7px 0 0;
-      color: #6b7280;
+      margin: 8px 0 0;
+      color: #64748b;
+      font-size: 16px;
     }
 
     /* NAVIGATION */
     nav {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 12px 15px;
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
+      gap: 5px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #dbe5e0;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
     }
 
     nav a {
-      color: #374151;
+      flex-shrink: 0;
       text-decoration: none;
-      padding: 9px 13px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.2s ease;
+      color: #26364a;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: all .25s ease;
     }
 
     nav a:hover {
-      background: #f1f5f9;
+      background: #e9f7ee;
+      color: #087443;
     }
 
     nav a.active {
-      background: #1f2937;
+      background: linear-gradient(135deg, #16834d, #0b6b42);
       color: #ffffff;
+      box-shadow: 0 5px 14px rgba(13,112,70,.25);
     }
 
     /* MAIN */
     .container {
       width: 92%;
-      max-width: 1050px;
-      margin: 50px auto;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0 70px;
     }
 
+    /* TITLE */
     .title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
+    }
+
+    .contact-symbol {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #16a05d, #087443);
+      color: white;
+      font-size: 32px;
+      box-shadow: 0 10px 25px rgba(16,137,78,.25);
     }
 
     .title h2 {
-      font-size: 36px;
-      margin: 0 0 12px;
+      margin: 0;
+      font-size: clamp(32px, 7vw, 48px);
+      color: #142033;
+      font-weight: 800;
+    }
+
+    .title h2::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 5px;
+      margin: 12px auto 18px;
+      border-radius: 20px;
+      background: linear-gradient(
+        90deg,
+        #16a05d,
+        #2196f3,
+        #9c27b0
+      );
     }
 
     .title p {
-      color: #6b7280;
-      font-size: 16px;
-      line-height: 1.7;
+      max-width: 760px;
+      margin: auto;
+      color: #667085;
+      font-size: 17px;
+      line-height: 1.8;
     }
 
-    /* CONTACT CARDS */
+    /* CONTACT GRID */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
 
+    /* CONTACT CARD */
     .contact-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      padding: 25px;
+      position: relative;
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
+      padding: 25px;
+      min-height: 130px;
+      border-radius: 22px;
       text-decoration: none;
-      color: inherit;
-      transition: 0.2s ease;
+      color: #172033;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 8px 25px rgba(30,50,70,.08);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
     }
 
     .contact-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(30,50,70,.14);
     }
 
+    .contact-card::after {
+      content: "›";
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 38px;
+      opacity: .65;
+    }
+
+    /* EMAIL */
+    .email-card {
+      background: linear-gradient(135deg, #fff0f0, #fffafa);
+      border-color: #ffd1d1;
+    }
+
+    .email-card::after {
+      color: #e53935;
+    }
+
+    /* INSTAGRAM */
+    .instagram-card {
+      background: linear-gradient(135deg, #fff0fa, #f5efff);
+      border-color: #e7caff;
+    }
+
+    .instagram-card::after {
+      color: #9c27b0;
+    }
+
+    /* X */
+    .twitter-card {
+      background: linear-gradient(135deg, #edf7ff, #f7fbff);
+      border-color: #b9dcff;
+    }
+
+    .twitter-card::after {
+      color: #1976d2;
+    }
+
+    /* YOUTUBE */
+    .youtube-card {
+      background: linear-gradient(135deg, #fff1f1, #fffafa);
+      border-color: #ffc9c9;
+    }
+
+    .youtube-card::after {
+      color: #e53935;
+    }
+
+    /* ICON */
     .icon {
-      width: 55px;
-      height: 55px;
-      min-width: 55px;
-      border-radius: 15px;
+      width: 64px;
+      height: 64px;
+      min-width: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f1f5f9;
-      font-size: 26px;
+      border-radius: 18px;
+      font-size: 30px;
+      color: white;
+      box-shadow: 0 7px 16px rgba(0,0,0,.12);
     }
 
+    .email-card .icon {
+      background: linear-gradient(135deg, #ef5350, #c62828);
+    }
+
+    .instagram-card .icon {
+      background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+      );
+    }
+
+    .twitter-card .icon {
+      background: #111827;
+    }
+
+    .youtube-card .icon {
+      background: linear-gradient(135deg, #ff3030, #d50000);
+    }
+
+    /* TEXT */
     .contact-card h3 {
       margin: 0 0 7px;
-      font-size: 19px;
+      font-size: 21px;
+      font-weight: 800;
     }
 
     .contact-card p {
       margin: 0;
-      color: #6b7280;
+      color: #687385;
+      font-size: 16px;
       word-break: break-word;
     }
 
-    /* NOTE */
+    /* INFORMATION NOTE */
     .note {
       margin-top: 30px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 22px;
-      line-height: 1.7;
-      color: #6b7280;
-      font-size: 14px;
+      padding: 25px 28px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #eaf5ff, #f2f9ff);
+      border: 1px solid #b9dcff;
+      color: #455468;
+      line-height: 1.8;
+      box-shadow: 0 7px 20px rgba(33,150,243,.07);
+    }
+
+    .note strong {
+      color: #075ca8;
+      font-size: 17px;
     }
 
     /* BACK BUTTON */
     .back {
       text-align: center;
-      margin-top: 35px;
+      margin-top: 38px;
     }
 
     .back a {
       display: inline-block;
-      padding: 12px 22px;
-      border-radius: 10px;
-      background: #1f2937;
-      color: #ffffff;
+      padding: 14px 25px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #16834d, #075f3b);
+      color: white;
       text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 8px 20px rgba(8,116,67,.22);
+      transition: .25s ease;
     }
 
     .back a:hover {
-      opacity: 0.9;
+      transform: translateY(-3px);
     }
 
     /* MOBILE */
-    @media (max-width: 650px) {
-
-      nav {
-        justify-content: flex-start;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-      }
-
-      nav a {
-        flex-shrink: 0;
-      }
+    @media (max-width: 700px) {
 
       .container {
         width: 94%;
-        margin: 35px auto;
-      }
-
-      .title h2 {
-        font-size: 29px;
+        padding: 45px 0 55px;
       }
 
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 17px;
       }
 
       .contact-card {
+        min-height: 120px;
+        padding: 20px;
+      }
+
+      .icon {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        font-size: 27px;
+      }
+
+      .contact-card h3 {
+        font-size: 19px;
+      }
+
+      .contact-card p {
+        font-size: 15px;
+      }
+
+      .title p {
+        font-size: 16px;
+      }
+
+      .note {
         padding: 20px;
       }
     }
@@ -208,118 +364,165 @@
   <!-- HEADER -->
   <header>
     <h1>Maharashtra PESA Citizen Portal</h1>
-    <p>नागरिकों के लिए PESA जानकारी और संसाधन</p>
+
+    <p>
+      नागरिकों के लिए PESA जानकारी और संसाधन
+    </p>
   </header>
 
 
-  <!-- MAIN NAVIGATION -->
+  <!-- NAVIGATION -->
   <nav>
-    <a href="index.html" class="nav-home">Home</a>
+
+    <a href="index.html">Home</a>
+
     <a href="pesa.html">PESA</a>
+
     <a href="gram-sabha.html">Gram Sabha</a>
+
     <a href="powers.html">Powers</a>
+
     <a href="audit.html">Legal Audit</a>
+
     <a href="records.html">Records</a>
+
     <a href="rti.html">RTI</a>
+
     <a href="documents.html">Documents</a>
+
     <a href="judgments.html">Judgments</a>
+
     <a href="contact.html" class="active">Contact</a>
+
   </nav>
 
 
-  <!-- CONTACT -->
+  <!-- MAIN CONTENT -->
   <main class="container">
 
+    <!-- TITLE -->
     <div class="title">
+
+      <div class="contact-symbol">
+        ✉
+      </div>
+
       <h2>संपर्क करें</h2>
 
       <p>
-        PESA, ग्राम सभा, ग्राम पंचायत और नागरिक अधिकारों से संबंधित
-        जानकारी के लिए नीचे दिए गए माध्यमों से संपर्क करें।
+        PESA, ग्राम सभा, ग्राम पंचायत और नागरिक अधिकारों से
+        संबंधित जानकारी के लिए नीचे दिए गए माध्यमों से संपर्क करें।
       </p>
+
     </div>
 
 
+    <!-- CONTACT CARDS -->
     <div class="contact-grid">
+
 
       <!-- EMAIL -->
       <a
-        class="contact-card"
         href="mailto:chaureroshan@gmail.com"
+        class="contact-card email-card"
       >
-        <div class="icon">📧</div>
+
+        <div class="icon">
+          ✉
+        </div>
 
         <div>
           <h3>Email</h3>
           <p>chaureroshan@gmail.com</p>
         </div>
+
       </a>
 
 
       <!-- INSTAGRAM -->
       <a
-        class="contact-card"
         href="https://www.instagram.com/chaure_roshan/"
         target="_blank"
         rel="noopener noreferrer"
+        class="contact-card instagram-card"
       >
-        <div class="icon">📸</div>
+
+        <div class="icon">
+          ◎
+        </div>
 
         <div>
           <h3>Instagram</h3>
           <p>@chaure_roshan</p>
         </div>
+
       </a>
 
 
-      <!-- X / TWITTER -->
+      <!-- TWITTER / X -->
       <a
-        class="contact-card"
         href="https://x.com/ChaureRoshan"
         target="_blank"
         rel="noopener noreferrer"
+        class="contact-card twitter-card"
       >
-        <div class="icon">𝕏</div>
+
+        <div class="icon">
+          𝕏
+        </div>
 
         <div>
           <h3>Twitter / X</h3>
           <p>@ChaureRoshan</p>
         </div>
+
       </a>
 
 
       <!-- YOUTUBE -->
       <a
-        class="contact-card"
         href="https://www.youtube.com/@chaure_roshan"
         target="_blank"
         rel="noopener noreferrer"
+        class="contact-card youtube-card"
       >
-        <div class="icon">▶️</div>
+
+        <div class="icon">
+          ▶
+        </div>
 
         <div>
           <h3>YouTube</h3>
           <p>@chaure_roshan</p>
         </div>
+
       </a>
 
     </div>
 
 
-    <!-- DISCLAIMER -->
+    <!-- INFORMATION NOTE -->
     <div class="note">
-      <strong>महत्वपूर्ण सूचना:</strong><br>
+
+      <strong>ℹ️ महत्वपूर्ण सूचना:</strong>
+
+      <br>
 
       यह पोर्टल नागरिकों को PESA, ग्राम सभा एवं संबंधित
-      जानकारी समझने और उपलब्ध संसाधनों तक पहुँचने में सहायता
-      करने के उद्देश्य से बनाया गया है। यह किसी सरकारी विभाग
-      की आधिकारिक वेबसाइट नहीं है।
+      जानकारी समझने और उपलब्ध संसाधनों तक पहुँचने में
+      सहायता करने के उद्देश्य से बनाया गया है।
+      यह किसी सरकारी विभाग की आधिकारिक वेबसाइट नहीं है।
+
     </div>
 
 
-    <!-- BACK -->
+    <!-- BACK BUTTON -->
     <div class="back">
-      <a href="index.html">← मुख्य पेज पर वापस जाएँ</a>
+
+      <a href="index.html">
+        🏠 &nbsp;← मुख्य पेज पर वापस जाएँ
+      </a>
+
     </div>
 
   </main>
