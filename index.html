@@ -211,27 +211,25 @@
 <hr>
 <p><strong>Created by - CHAURE ROSHAN</strong></p>
 <p>📍 Dharangaon Post- Shirsole<br>Tal- Sakri, Dhule, Maharashtra - 424304</p>
-</div>
-        <!-- Visitor Counter -->
-<div id="visitor-count-footer">
+<div id="visitor-count-footer"
+     style="margin-top:14px; text-align:center; font-size:14px; font-weight:600;">
   👁️ एकूण वेबसाइट भेटी: <span id="total-visits">...</span>
 </div>
 
 <script>
-(function () {
-  var timer = setInterval(function () {
-    if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(timer);
-
-      window.goatcounter.visit_count({
-        append: '#total-visits',
-        path: 'TOTAL',
-        no_branding: true
-      });
-    }
-  }, 100);
-})();
+fetch('https://chaureroshan.goatcounter.com/counter/TOTAL.json')
+  .then(function(response) {
+    if (!response.ok) throw new Error('Counter unavailable');
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById('total-visits').textContent = data.count;
+  })
+  .catch(function() {
+    document.getElementById('total-visits').textContent = '—';
+  });
 </script>
+</div>
 </footer>
 
 </body></html>
