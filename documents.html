@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Documents — Maharashtra PESA</title><link rel="stylesheet" href="styles.css"></head>
+<title>Documents — Maharashtra PESA</title><link rel="stylesheet" href="styles.css"><script data-goatcounter="https://chaureroshan.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script></head>
 <body>
 <header><h1>🌿 Maharashtra PESA</h1><p>तुमचं गाव • तुमचे अधिकार • तुमचा PESA</p></header>
 
@@ -47,6 +48,24 @@
 <hr>
 <p><strong>Created by - CHAURE ROSHAN</strong></p>
 <p>📍 Dharangaon Post- Shirsole<br>Tal- Sakri, Dhule, Maharashtra - 424304</p>
+<div id="visitor-count-footer"
+     style="margin-top:14px; text-align:center; font-size:14px; font-weight:600;">
+  👁️ Visitor Count: <span id="total-visits">...</span>
+</div>
+
+<script>
+fetch('https://chaureroshan.goatcounter.com/counter/TOTAL.json')
+  .then(function(response) {
+    if (!response.ok) throw new Error('Counter unavailable');
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById('total-visits').textContent = data.count;
+  })
+  .catch(function() {
+    document.getElementById('total-visits').textContent = '—';
+  });
+</script>
 </div>
 </footer>
 
