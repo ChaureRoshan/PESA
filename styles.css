@@ -137,3 +137,30 @@ header p{
   position:relative;
   z-index:2;
 }
+/* =========================
+   VISITOR COUNTER
+   ========================= */
+
+#visitor-counter {
+  max-width: 420px;
+  margin: 25px auto 15px;
+  padding: 14px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f5e9, #f1fff4);
+  border: 2px solid #2e7d32;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+#visitor-counter .visitor-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #176b2c;
+}
+
+#total-visits {
+  margin-top: 5px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #145a24;
+}
