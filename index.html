@@ -212,17 +212,16 @@
 
 </main>
 
-  <!-- Visitor Counter -->
 <div id="visitor-counter">
-  <div class="visitor-title">👁️ एकूण वेबसाइट भेटी</div>
-  <div id="total-visits">Loading...</div>
+  <span class="visitor-title">👁️ एकूण वेबसाइट भेटी:</span>
+  <span id="total-visits">Loading...</span>
 </div>
 
 <script>
 (function () {
-  var checkGoatCounter = setInterval(function () {
+  var t = setInterval(function () {
     if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(checkGoatCounter);
+      clearInterval(t);
 
       window.goatcounter.visit_count({
         append: '#total-visits',
