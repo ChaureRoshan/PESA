@@ -203,16 +203,25 @@
 
 </main>
 
-<div id="visitor-counter">
-  <span class="visitor-title">👁️ एकूण वेबसाइट भेटी:</span>
-  <span id="total-visits">Loading...</span>
+<footer>
+<p><strong>Maharashtra PESA</strong></p>
+<p>तुमचं गाव • तुमचे अधिकार • तुमचा PESA</p>
+<p>कायदेशीर निर्णय घेण्यापूर्वी संबंधित Act, Rules, Government Orders आणि लागू न्यायालयीन निर्णयांचा मूळ मजकूर तपासा.</p>
+<div class="creator-info">
+<hr>
+<p><strong>Created by - CHAURE ROSHAN</strong></p>
+<p>📍 Dharangaon Post- Shirsole<br>Tal- Sakri, Dhule, Maharashtra - 424304</p>
+</div>
+        <!-- Visitor Counter -->
+<div id="visitor-count-footer">
+  👁️ एकूण वेबसाइट भेटी: <span id="total-visits">...</span>
 </div>
 
 <script>
 (function () {
-  var t = setInterval(function () {
+  var timer = setInterval(function () {
     if (window.goatcounter && window.goatcounter.visit_count) {
-      clearInterval(t);
+      clearInterval(timer);
 
       window.goatcounter.visit_count({
         append: '#total-visits',
@@ -223,16 +232,6 @@
   }, 100);
 })();
 </script>
-
-<footer>
-<p><strong>Maharashtra PESA</strong></p>
-<p>तुमचं गाव • तुमचे अधिकार • तुमचा PESA</p>
-<p>कायदेशीर निर्णय घेण्यापूर्वी संबंधित Act, Rules, Government Orders आणि लागू न्यायालयीन निर्णयांचा मूळ मजकूर तपासा.</p>
-<div class="creator-info">
-<hr>
-<p><strong>Created by - CHAURE ROSHAN</strong></p>
-<p>📍 Dharangaon Post- Shirsole<br>Tal- Sakri, Dhule, Maharashtra - 424304</p>
-</div>
 </footer>
 
 </body></html>
