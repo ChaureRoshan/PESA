@@ -212,6 +212,28 @@
 
 </main>
 
+  <!-- Visitor Counter -->
+<div id="visitor-counter">
+  <div class="visitor-title">👁️ एकूण वेबसाइट भेटी</div>
+  <div id="total-visits">Loading...</div>
+</div>
+
+<script>
+(function () {
+  var checkGoatCounter = setInterval(function () {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      clearInterval(checkGoatCounter);
+
+      window.goatcounter.visit_count({
+        append: '#total-visits',
+        path: 'TOTAL',
+        no_branding: true
+      });
+    }
+  }, 100);
+})();
+</script>
+
 <footer>
 <p><strong>Maharashtra PESA</strong></p>
 <p>तुमचं गाव • तुमचे अधिकार • तुमचा PESA</p>
